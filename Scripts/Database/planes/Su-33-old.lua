@@ -33,7 +33,6 @@ return plane( "Su-33", _("Su-33"),
         }, -- end of TakeOffRWCategories
         WingSpan = "14.7",
         WorldID = 4,
-		country_of_origin = "RUS",
 
 		-- Countermeasures
 		passivCounterm = {
@@ -52,6 +51,10 @@ return plane( "Su-33", _("Su-33"),
             pl_cat("{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}", "Interceptor"),
         },
         CanopyGeometry = makeAirplaneCanopyGeometry(LOOK_AVERAGE, LOOK_AVERAGE, LOOK_AVERAGE),
+		
+		mech_timing = {{0.0, 0.074; 0.11, 0.14}, -- CANOPY_OPEN_TIMES
+					   {0.0, 0.18; 0.89, 0.074}, -- CANOPY_CLOSE_TIMES
+					  },
 
         Sensors = {
             RADAR = "N-001",
@@ -104,8 +107,8 @@ return plane( "Su-33", _("Su-33"),
             },
             {
                 { CLSID = "{FBC29BFE-3D24-4C64-B81D-941239D12249}" },	--R-73
+                { CLSID = "{B4C01D60-A8A3-4237-BD72-CA7655BC0FE9}" }, --R-77
                 BD3("{3C612111-C7AD-476E-8A8E-2485812F4E5C}"),			--FAB-250
-				BD3("{0511E528-EA28-4caf-A212-00D1408DF10A}"),			--SAB-100
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B1}" },	--Smoke Generator - red
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B2}" },	--Smoke Generator - green
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B3}" },	--Smoke Generator - blue
@@ -121,6 +124,7 @@ return plane( "Su-33", _("Su-33"),
             },
             {
                 { CLSID = "{FBC29BFE-3D24-4C64-B81D-941239D12249}" },	--R-73
+                { CLSID = "{B4C01D60-A8A3-4237-BD72-CA7655BC0FE9}" }, --R-77
                 { CLSID = "{9B25D316-0434-4954-868F-D51DB1A38DF0}" },	--R-27R
                 { CLSID = "{88DAC840-9F75-4531-8689-B46E64E42E53}" },	--R-27T
                 { CLSID = "{B79C379A-9E87-4E50-A1EE-7F7E29C2E87A}" },	--R-27ET
@@ -147,14 +151,7 @@ return plane( "Su-33", _("Su-33"),
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B6}" },	--Smoke Generator - orange
 				BD3("B-8M1 - 20 S-8OFP2"),								--B-8M1 - 20 S-8OFP2
 				BD3("{3DFB7320-AB0E-11d7-9897-000476191836}"),			--B-8M1 - 20 S-8TsM
-				BD3("{0511E528-EA28-4caf-A212-00D1408DF10A}"),			--SAB-100
-				{ CLSID = "{TWIN_S25}" 				, arg_value = 1},	--2* S-25 OFM
-				{ CLSID = "{TWIN_B13L_5OF}" 		, arg_value = 1},	--2* B-13L - 5 S-13 OF
-				{ CLSID = "{TWIN_B_8M1_S_8KOM}" 	, arg_value = 1},	--2* B-8M1 - 20 S-8KOM
-				{ CLSID = "{TWIN_B_8M1_S_8TsM}" 	, arg_value = 1},	--2* B-8M1 - 20 S-8TsM
-				{ CLSID = "{TWIN_B_8M1_S_8_OFP2}"	, arg_value = 1},	--2* B-8M1 - 20 S-8OFP2
-				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			-- 6 * FAB-100
-				MBD("{MBD3_U6_3*FAB-250_fwd}"),							-- 3 * FAB-250
+				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			--MER*6 FAB-100
             }
         ),
         pylon(4, 0, -0.091000, -0.321000, -3.253000,
@@ -187,7 +184,7 @@ return plane( "Su-33", _("Su-33"),
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B6}" },	--Smoke Generator - orange
 				BD3("B-8M1 - 20 S-8OFP2"),								--B-8M1 - 20 S-8OFP2
 				BD3("{3DFB7320-AB0E-11d7-9897-000476191836}"),			--B-8M1 - 20 S-8TsM
-				BD3("{0511E528-EA28-4caf-A212-00D1408DF10A}"),			--SAB-100
+				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			--MER*6 FAB-100
             }
         ),
         pylon(5, 1, -0.075000, -1.218000, -1.192000,
@@ -215,9 +212,7 @@ return plane( "Su-33", _("Su-33"),
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B4}" },	--Smoke Generator - white
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B5}" },	--Smoke Generator - yellow
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B6}" },	--Smoke Generator - orange
-				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			-- 6 * FAB-100
-				MBD("{3E35F8C1-052D-11d6-9191-00A0249B6F00}"),			-- 4 * FAB-250
-				BD3("{0511E528-EA28-4caf-A212-00D1408DF10A}"),			--SAB-100
+				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			--MER*6 FAB-100
             }
         ),
         pylon(6, 1, -3.751000, -0.384000, 0.000000,
@@ -243,10 +238,7 @@ return plane( "Su-33", _("Su-33"),
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B4}" },	--Smoke Generator - white
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B5}" },	--Smoke Generator - yellow
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B6}" },	--Smoke Generator - orange
-				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			--6 * FAB-100
-				MBD("{53BE25A4-C86C-4571-9BC0-47D668349595}"),			--6 * FAB-250
-				BD3("{0511E528-EA28-4caf-A212-00D1408DF10A}"),			--SAB-100
-
+				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			--MER*6 FAB-100
             }
         ),
         pylon(7, 1, 0.986000, -0.384000, 0.000000,
@@ -268,9 +260,7 @@ return plane( "Su-33", _("Su-33"),
                 BD3("{D5435F26-F120-4FA3-9867-34ACE562EF1B}"),			--RBK-500 PTAB-10-5
 				BD3("{7AEC222D-C523-425e-B714-719C0D1EB14D}"),			--RBK-500 PTAB-1M
                 BD3("{37DCC01E-9E02-432F-B61D-10C166CA2798}"),			--FAB-500 M62
-				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			-- 6 * FAB-100
-				MBD("{53BE25A4-C86C-4571-9BC0-47D668349595}"),			-- 6 * FAB-250
-				BD3("{0511E528-EA28-4caf-A212-00D1408DF10A}"),			--SAB-100
+				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			--MER*6 FAB-100
             }
         ),
         pylon(8, 1, -0.075000, -1.218000, 1.192000,
@@ -298,9 +288,7 @@ return plane( "Su-33", _("Su-33"),
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B4}" },	--Smoke Generator - white
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B5}" },	--Smoke Generator - yellow
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B6}" },	--Smoke Generator - orange
-				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			-- 6 * FAB-100
-				MBD("{3E35F8C1-052D-11d6-9191-00A0249B6F00}"),			-- 4 * FAB-250
-				BD3("{0511E528-EA28-4caf-A212-00D1408DF10A}"),			--SAB-100
+				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			--MER*6 FAB-100
             }
         ),
         pylon(9, 0, -0.091000, -0.321000, 3.253000,
@@ -333,7 +321,7 @@ return plane( "Su-33", _("Su-33"),
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B6}" },	--Smoke Generator - orange
 				BD3("B-8M1 - 20 S-8OFP2"),								--B-8M1 - 20 S-8OFP2
 				BD3("{3DFB7320-AB0E-11d7-9897-000476191836}"),			--B-8M1 - 20 S-8TsM
-				BD3("{0511E528-EA28-4caf-A212-00D1408DF10A}"),			--SAB-100
+				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			--MER*6 FAB-100
             }
         ),
         pylon(10, 0, -1.137000, -0.321000, 4.524000,
@@ -343,6 +331,7 @@ return plane( "Su-33", _("Su-33"),
             },
             {
                 { CLSID = "{FBC29BFE-3D24-4C64-B81D-941239D12249}" },	--R-73
+                { CLSID = "{B4C01D60-A8A3-4237-BD72-CA7655BC0FE9}" }, --R-77
                 { CLSID = "{9B25D316-0434-4954-868F-D51DB1A38DF0}" },	--R-27R
                 { CLSID = "{88DAC840-9F75-4531-8689-B46E64E42E53}" },	--R-27T
                 { CLSID = "{B79C379A-9E87-4E50-A1EE-7F7E29C2E87A}" },	--R-27ET
@@ -369,14 +358,7 @@ return plane( "Su-33", _("Su-33"),
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B6}" },	--Smoke Generator - orange
 				BD3("B-8M1 - 20 S-8OFP2"),								--B-8M1 - 20 S-8OFP2
 				BD3("{3DFB7320-AB0E-11d7-9897-000476191836}"),			--B-8M1 - 20 S-8TsM
-				BD3("{0511E528-EA28-4caf-A212-00D1408DF10A}"),			--SAB-100
-				{ CLSID = "{TWIN_S25}" 				, arg_value = 1},	--2* S-25 OFM
-				{ CLSID = "{TWIN_B13L_5OF}" 		, arg_value = 1},	--2* B-13L - 5 S-13 OF
-				{ CLSID = "{TWIN_B_8M1_S_8KOM}" 	, arg_value = 1},	--2* B-8M1 - 20 S-8KOM
-				{ CLSID = "{TWIN_B_8M1_S_8TsM}" 	, arg_value = 1},	--2* B-8M1 - 20 S-8TsM
-				{ CLSID = "{TWIN_B_8M1_S_8_OFP2}"	, arg_value = 1},	--2* B-8M1 - 20 S-8OFP2
-				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			-- 6 * FAB-100
-				MBD("{MBD3_U6_3*FAB-250_fwd}"),							-- 3 * FAB-250
+				MBD("{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"),			--MER*6 FAB-100
             }
         ),
         pylon(11, 0, -2.535000, -0.165000, 6.168000,
@@ -386,8 +368,8 @@ return plane( "Su-33", _("Su-33"),
             },
             {
                 { CLSID = "{FBC29BFE-3D24-4C64-B81D-941239D12249}" },	--R-73
+                { CLSID = "{B4C01D60-A8A3-4237-BD72-CA7655BC0FE9}" }, --R-77
                 BD3("{3C612111-C7AD-476E-8A8E-2485812F4E5C}"),			--FAB-250
-				BD3("{0511E528-EA28-4caf-A212-00D1408DF10A}"),			--SAB-100
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B1}" },	--Smoke Generator - red
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B2}" },	--Smoke Generator - green
                 { CLSID = "{D3F65166-1AB8-490f-AF2F-2FB6E22568B3}" },	--Smoke Generator - blue
@@ -426,6 +408,4 @@ return plane( "Su-33", _("Su-33"),
 		aircraft_task(AntishipStrike),
     },
 	aircraft_task(CAP)
-	
-	
 );

@@ -38,37 +38,35 @@ M_2000C =  {
 	-- add model draw args for network transmitting to this draw_args table (32 limit)
 	net_animation = 
 	{
-		21,  --  1 DRAG_CHUTE_UNLOCK
-		35,  --  2 DRAG_CHUTE
-		38,  --  3 CANOPY ANGLE
-		49,  --  4 NAV_LIGHTS
-		51,  --  5 LANDING_LIGHTS
-		83,  --  6 STROBE_LIGHT_TOP
-		88,  --  7 FORM_LIGHTS
-		99,  --  8 HEAD UP/DOWN
-		190, --  9 LEFT_NAV_LIGHT
-		191, -- 10 TAIL_NAV_LIGHT
-		192, -- 11 RIGHT_NAV_LIGHT
-		200, -- 12 FORM_LIGHT_FRONT
-		201, -- 13 FORM_LIGHT_AFT
-		208, -- 14 LANDING_LIGHT
-		209, -- 15 TAXI_LIGHT
-		334, -- 16 DRAG_CHUTE_VERTICAL
-		335, -- 17 DRAG_CHUTE_HORIZONTAL
-		336, -- 18 DRAG_CHUTE_CAP
-		373, -- 19 INTERNAL AB GLOW
-		802, -- 20 STRONG_LIGHT_BOTTOM
-		902, -- 21 REFUEL LIGHT MOVE
-		903, -- 22 REFUEL LIGHT SIDE LOW
-		904, -- 23 REFUEL LIGHT NOSE LOW
-		905, -- 24 POLICE LIGHT
-		906, -- 25 PILOT VISOR
-		907, -- 26 REFUEL LIGHT SIDE HIGH
-		908, -- 27 REFUEL LIGHT NOSE HIGH
-        182, -- 28 LEFT_AIRBRAKE
-        184, -- 29 RIGHT_AIRBRAKE
-        900, -- 30 LEFT_INTAKE_SCOOP
-        901, -- 32 RIGHT_INTAKE_SCOOP
+		21,  -- DRAG_CHUTE_UNLOCK
+		35,  -- DRAG_CHUTE
+		49,  -- NAV_LIGHTS
+		51,  -- LANDING_LIGHTS
+		83,  -- STROBE_LIGHT_TOP
+		88,  -- FORM_LIGHTS
+		190, -- LEFT_NAV_LIGHT
+		191, -- TAIL_NAV_LIGHT
+		192, -- RIGHT_NAV_LIGHT
+		200, -- FORM_LIGHT_FRONT
+		201, -- FORM_LIGHT_AFT
+		208, -- LANDING_LIGHT
+		209, -- TAXI_LIGHT
+		334, -- DRAG_CHUTE_VERTICAL
+		335, -- DRAG_CHUTE_HORIZONTAL
+		336, -- DRAG_CHUTE_CAP
+		373, -- INTERNAL AB GLOW
+		802, -- STRONG_LIGHT_BOTTOM
+		902, -- REFUEL LIGHT MOVE
+		903, -- REFUEL LIGHT SIDE LOW
+		904, -- REFUEL LIGHT NOSE LOW
+		905, -- POLICE LIGHT
+		906, -- PILOT VISOR
+		907, -- REFUEL LIGHT SIDE HIGH
+		908, -- REFUEL LIGHT NOSE HIGH
+        182, -- LEFT_AIRBRAKE
+        184, -- RIGHT_AIRBRAKE
+        900, -- LEFT_INTAKE_SCOOP
+        901, -- RIGHT_INTAKE_SCOOP
 	},
 	
 	-------------------------
@@ -94,7 +92,7 @@ M_2000C =  {
 	Ny_max 						= 8.0,     	-- Max G (for AI)
 	Ny_max_e 					= 8.0,     	-- Max G (for AI)
 	AOA_take_off 				= 0.175,  	-- AoA in take off (for AI)
-	bank_angle_max 				= 60,    	-- Max bank angle (for AI)
+	bank_angle_max 				= 70,    	-- Max bank angle (for AI)
 	has_afteburner 				= true,  	-- AFB yes/no
 	has_speedbrake 				= true,  	-- Speedbrake yes/no
 	has_differential_stabilizer = false,
@@ -113,7 +111,7 @@ M_2000C =  {
 	nose_gear_amortizer_reversal_stroke      = -0.015,		-- up
 	nose_gear_amortizer_normal_weight_stroke =  0.1,		-- down from nose_gear_pos
 	
-	main_gear_pos 							 = {-1.9,-1.5, 1.75},	-- main gear coords
+	main_gear_pos 							 = {-1.9,-1.55, 1.75},	-- main gear coords
 	main_gear_wheel_diameter				 =  0.45 * 2.0,				-- in m
 	main_gear_amortizer_direct_stroke        =  0.21,		-- down from main_gear_pos !!!
 	main_gear_amortizer_reversal_stroke      = -0.01, 		-- up
@@ -138,7 +136,7 @@ M_2000C =  {
 	length 						= 14.36,	-- full lenght in m
 	height 						= 5.20,		-- height in m
 	range 						= 1550,		-- Max range in km (for AI)
-	RCS 						= 4.0,		-- Radar Cross Section m2
+	RCS 						= 2.5,		-- Radar Cross Section m2
 	IR_emission_coeff 			= 0.8,		-- Normal engine -- IR_emission_coeff = 1 is Su-27 without afterburner. It is reference.
 	IR_emission_coeff_ab 		= 1.62,		-- With afterburner
 	wing_tip_pos 				= { -5.0, -0.100, 4.565}, -- wingtip coords for visual effects
@@ -147,54 +145,30 @@ M_2000C =  {
 	engines_nozzles = {
 		[1] =
 		{
-			pos 		=  {-6.585, 0.525, 0.000}, -- nozzle coords
+			pos 		=  {-6.900, 0.525, 0.000}, -- nozzle coords
 			elevation   =  0, -- AFB cone elevation
-			diameter	 = 1.30, -- AFB cone diameter
+			diameter	 = 1.15, -- AFB cone diameter
 			exhaust_length_ab   = 9, -- lenght in m
-			exhaust_length_ab_K = 0.7, -- AB animation
+			exhaust_length_ab_K = 0.5, -- AB animation
 			smokiness_level = 0.2,
 		}, -- end of [1]
 	}, -- end of engines_nozzles
-	
 	crew_size	 = 1,
 	crew_members =
 	{
 		[1] =
 		{
-			bailout_arg 			= -1,
-			ejection_seat_name		= "M-2000C_pilotseat",
-			pilot_name		   		= "M-2000C_pilot",
-			drop_canopy_name		= "M-2000c_canopy",
-			drop_parachute_name 	= "M-2000C_parachute",
-			pos						= {2.679, 0.512, 0.0, },
-			canopy_pos				= {2.739, 0.677, 0.0},
-			g_suit 			    	=  5
+			ejection_through_canopy  = true, 
+			ejection_play_arg	=  909,
+			ejection_seat_name	= "M-2000C_pilotseat",
+			pilot_name		   	=  "M-2000C_pilot",
+			drop_canopy_name	=  "M-2000c_canopy",
+			drop_parachute_name =  "M-2000C_parachute",
+			pos					= {2.679, 0.512, 0.0, },
+			canopy_pos			= {2.739, 0.677, 0.0},
+			g_suit 			    =  5
 		}, -- end of [1]
 	}, -- end of crew_members
-
-    mechanimations = {
-        Door0 = {
-            {Transition = {"Close", "Open"},  Sequence = {{C = {{"VelType", 3}, {"Arg", 38, "to", 0.9, "in", 5.0},},},}, Flags = {"Reversible"},},
-            {Transition = {"Open", "Close"},  Sequence = {{C = {{"VelType", 3}, {"Arg", 38, "to", 0.0, "in", 3.0},},},}, Flags = {"Reversible", "StepsBackwards"},},
-            {Transition = {"Any", "Bailout"}, Sequence = {{C = {{"Arg", 909, "set", 1.0},},},},},
-        },
-        ServiceHatches = {
-            {Transition = {"Close", "Open"}, Sequence = {{C = {{"PosType", 3}, {"Sleep", "for", 30.0}}}, {C = {{"Arg", 24, "set", 1.0}}}}},
-            {Transition = {"Open", "Close"}, Sequence = {{C = {{"PosType", 6}, {"Sleep", "for", 5.0}}}, {C = {{"Arg", 24, "set", 0.0}}}}},
-        },
-        CrewLadder = {
-            {Transition = {"Dismantle", "Erect"}, Sequence = {
-                {C = {{"PosType", 6}, {"Sleep", "for", 10.0}}},
-                {C = {{"Arg", 91, "set", 1.0}}},
-                {C = {{"PosType", 6}, {"Sleep", "for", 10.0}}},
-            }},
-            {Transition = {"Erect", "Dismantle"}, Sequence = {
-                {C = {{"PosType", 6}, {"Sleep", "for", 10.0}}},
-                {C = {{"Arg", 91, "set", 0.0}}},
-                {C = {{"PosType", 6}, {"Sleep", "for", 10.0}}},
-            }},
-        },
-    }, -- end of mechanimations
 
 	fires_pos =
 		{
@@ -206,10 +180,7 @@ M_2000C =  {
 			[6] = 	{-2.346, -0.448,  0.000}, -- Air intake bottom L
 			[7] = 	{ 2.346, -0.448,  0.000}, -- Air intake bottom R
 		}, -- end of fires_pos
-        
-    effects_presets = {		
-		{effect = "OVERWING_VAPOR", file = current_mod_path.."/Effects/M-2000C_overwingVapor.lua"},
-	},
+
 
 	-- Countermeasures
 	Countermeasures = {
@@ -261,7 +232,7 @@ M_2000C =  {
 				--Air-to-Air
 				{CLSID = "{MMagicII}", arg_value = 0.15, required = {{station = 9,loadout = {"{MMagicII}"}}} }, -- Matra Magic R.550
 				{CLSID = "{Matra155RocketPod}", arg_value = 0.15, required = {{station = 9,loadout = {"{Matra155RocketPod}"}}} }, -- Matra Type 155 Rocket pod
-				
+				{CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}", arg_value = 0.15 }, -- AIM-9M
 				-- Smoke Generators
 				{CLSID = "{A4BCC903-06C8-47bb-9937-A30FEDB4E741}", arg_value = 0.15,arg_increment = -0.1,
 							forbidden = {{station = 2}, {station = 3}, {station = 4}, {station = 6}, {station = 7}, {station = 8}}},-- Smokewinder red
@@ -286,8 +257,8 @@ M_2000C =  {
 				
 				--Air-to-Ground
 				{CLSID = "{Matra155RocketPod}", arg_value = 0.25, required = {{station = 8,loadout = {"{Matra155RocketPod}"}}} }, -- Matra Type 155 Rocket pod
-				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.35, attach_point_position = {-0.13, -0.14,  0.0}, required = {{station = 8, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}} }, -- MK-82
-				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.35, attach_point_position = {-0.13, -0.14,  0.0}, required = {{station = 8,loadout = {"{Mk82SNAKEYE}"}}} }, -- MK-82 Snakeye
+				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.35, attach_point_position = {-0.08,  -0.003,  0.0}, required = {{station = 8, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}} }, -- MK-82
+				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.35, attach_point_position = {-0.08,  0.02,  0.0}, required = {{station = 8,loadout = {"{Mk82SNAKEYE}"}}} }, -- MK-82 Snakeye
 				{CLSID = "{BLG66_BELOUGA_AC}", arg_value = 0.35, required = {{station = 8,loadout = {"{BLG66_BELOUGA_AC}"}}} }, -- BLG-66 Belouga
 				{CLSID = "{M2KC_RAFAUT_MK82}", arg_value = 0.35, attach_point_position = {0.015,  0.036,  0.0},  required = {{station = 8, loadout = {"{M2KC_RAFAUT_MK82}"}}} }, -- MK-82 x2
 				{CLSID = "{M2KC_RAFAUT_MK82S}", arg_value = 0.35, attach_point_position = {0.015,  0.036,  0.0}, required = {{station = 8, loadout = {"{M2KC_RAFAUT_MK82S}"}}} }, -- MK-82S x2
@@ -295,18 +266,17 @@ M_2000C =  {
 				
 				--Fuel tanks
 				{CLSID = "{M2KC_02_RPL541}", arg_value = 0.0, required = {{station = 8,loadout = {"{M2KC_08_RPL541}"}}} }, -- RPL 541 Fuel Tank
-                {CLSID = "{M2KC_02_RPL541_EMPTY}", arg_value = 0.0, required = {{station = 8,loadout = {"{M2KC_08_RPL541_EMPTY}"}}} }, -- RPL 541 Fuel Tank
 			}
 		),
 		
 		-- LEFT WING ROOT
 		pylon(3, 0,  0.870,  -0.467, 0.779,{use_full_connector_position=true, connector = "str_pnt_003", arg = 310, arg_value = 0},
 			{
-				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.15, attach_point_position = {-0.13, -0.14,  0.0}, required = {
+				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.15, attach_point_position = {-0.08, 0.02,  0.0}, required = {
 							{station = 4, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}, 
 							{station = 6, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}, 
 							{station = 7, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}} }, -- MK-82
-				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.15, attach_point_position = {-0.13, -0.14,  0.0}, required = {
+				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.15, attach_point_position = {-0.08,  0.041,  0.0}, required = {
 							{station = 4, loadout = {"{Mk82SNAKEYE}"}}, 
 							{station = 6, loadout = {"{Mk82SNAKEYE}"}}, 
 							{station = 7, loadout = {"{Mk82SNAKEYE}"}}} }, -- MK-82 Snakeye
@@ -314,7 +284,7 @@ M_2000C =  {
 							{station = 4, loadout = {"{BLG66_BELOUGA_AC}"}}, 
 							{station = 6, loadout = {"{BLG66_BELOUGA_AC}"}}, 
 							{station = 7, loadout = {"{BLG66_BELOUGA_AC}"}}} }, -- BLG-66 Belouga Cluster bomb
-				{CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}", arg_value = 0.15,attach_point_position = {0.30,  -0.14,  0.0}, 
+				{CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}", arg_value = 0.15,attach_point_position = {0.0,  0.02,  0.0}, 
 							required = {{station = 7, loadout = {"{DB769D48-67D7-42ED-A2BE-108D566C8B1E}"}}},
 							forbidden = {{station = 4}, {station = 6}} }, -- GBU-12
 			}
@@ -322,11 +292,11 @@ M_2000C =  {
 		
 		pylon(4, 0, -3.115, -0.467, 1.080, {use_full_connector_position=true, connector = "str_pnt_004", arg = 311, arg_value = 0},
 			{
-				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.15, attach_point_position = {-0.13, -0.14,  0.0}, required = {
+				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.15, attach_point_position = {-0.08,  0.01,  0.0}, required = {
 							{station = 3, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}, 
 							{station = 6, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}, 
 							{station = 7, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}} }, -- MK-82
-				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.15, attach_point_position = {-0.13, -0.14,  0.0}, required = {
+				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.15, attach_point_position = {-0.08,  0.04,  0.0}, required = {
 							{station = 3, loadout = {"{Mk82SNAKEYE}"}}, 
 							{station = 6, loadout = {"{Mk82SNAKEYE}"}}, 
 							{station = 7, loadout = {"{Mk82SNAKEYE}"}}} }, -- MK-82 Snakeye
@@ -347,7 +317,6 @@ M_2000C =  {
 				{CLSID = "{M2KC_RAFAUT_GBU12}", arg_value = 0.25, attach_point_position = {-0.07,  0.02,  0.0} }, -- GBU-12 x2
 
 				{CLSID = "{M2KC_RPL_522}", arg_value = 0.15 }, -- RPL 522 FUEL TANK
-                {CLSID = "{M2KC_RPL_522_EMPTY}", arg_value = 0.15 }, -- RPL 522 FUEL TANK
 				
 				-- Smoke Generators
 				{ CLSID = "{A4BCC903-06C8-47bb-9937-A30FEDB4E741}", arg_value = 0.15,arg_increment = -0.1,
@@ -368,11 +337,11 @@ M_2000C =  {
 		-- RIGHT WING ROOT
 		pylon(6, 0, -3.115, -0.467, -1.080, {use_full_connector_position=true, connector = "str_pnt_007", arg = 314, arg_value = 0},
 			{
-				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.15, attach_point_position = {-0.13, -0.14,  0.0}, required = {
+				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.15, attach_point_position = {-0.08,  0.01,  0.0}, required = {
 							{station = 3, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}, 
 							{station = 4, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}, 
 							{station = 7, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}} }, -- MK-82
-				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.15, attach_point_position = {-0.13, -0.14,  0.0}, required = {
+				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.15, attach_point_position = {-0.08,  0.04,  0.0}, required = {
 							{station = 3, loadout = {"{Mk82SNAKEYE}"}}, 
 							{station = 4, loadout = {"{Mk82SNAKEYE}"}}, 
 							{station = 7, loadout = {"{Mk82SNAKEYE}"}}} }, -- MK-82 Snakeye
@@ -385,11 +354,11 @@ M_2000C =  {
 		
 		pylon(7, 0,  0.870, -0.467, -0.779,{use_full_connector_position=true, connector = "str_pnt_006", arg = 313, arg_value = 0},
 			{
-				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.15, attach_point_position = {-0.13, -0.14,  0.0}, required = {
+				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.15, attach_point_position = {-0.08, 0.02,  0.0}, required = {
 							{station = 3, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}, 
 							{station = 4, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}, 
 							{station = 6, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}} }, -- MK-82
-				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.15, attach_point_position = {-0.13, -0.14,  0.0}, required = {
+				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.15, attach_point_position = {-0.08,  0.041,  0.0}, required = {
 							{station = 3, loadout = {"{Mk82SNAKEYE}"}}, 
 							{station = 4, loadout = {"{Mk82SNAKEYE}"}}, 
 							{station = 6, loadout = {"{Mk82SNAKEYE}"}}} }, -- MK-82 Snakeye
@@ -397,7 +366,7 @@ M_2000C =  {
 							{station = 3, loadout = {"{BLG66_BELOUGA_AC}"}}, 
 							{station = 4, loadout = {"{BLG66_BELOUGA_AC}"}}, 
 							{station = 6, loadout = {"{BLG66_BELOUGA_AC}"}}} }, -- BLG-66 Belouga
-				{CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}", arg_value = 0.15,attach_point_position = {0.30,  -0.14,  0.0}, 
+				{CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}", arg_value = 0.15,attach_point_position = {0.0,  0.02,  0.0}, 
 							required = {{station = 3, loadout = {"{DB769D48-67D7-42ED-A2BE-108D566C8B1E}"}}},
 							forbidden = {{station = 4}, {station = 6}} }, -- GBU-12
 			}
@@ -412,8 +381,8 @@ M_2000C =  {
 				
 				--Air-to-Ground
 				{CLSID = "{Matra155RocketPod}", arg_value = 0.25, required = {{station = 2,loadout = {"{Matra155RocketPod}"}}} }, -- Matra Type 155 Rocket pod
-				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.35, attach_point_position = {-0.13, -0.14,  0.0}, required = {{station = 2, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}} }, -- MK-82
-				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.35, attach_point_position = {-0.13, -0.14,  0.0}, required = {{station = 2,loadout = {"{Mk82SNAKEYE}"}}} }, -- MK-82 Snakeye
+				{CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}", arg_value = 0.35, attach_point_position = {-0.08,  -0.003,  0.0}, required = {{station = 2, loadout = {"{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"}}} }, -- MK-82
+				{CLSID = "{Mk82SNAKEYE}", arg_value = 0.35, attach_point_position = {-0.08,  0.02,  0.0}, required = {{station = 2,loadout = {"{Mk82SNAKEYE}"}}} }, -- MK-82 Snakeye
 				{CLSID = "{BLG66_BELOUGA_AC}", arg_value = 0.35, required = {{station = 2,loadout = {"{BLG66_BELOUGA_AC}"}}} }, -- BLG-66 Belouga
 				{CLSID = "{M2KC_RAFAUT_MK82}", arg_value = 0.35, attach_point_position = {0.015,  0.036,  0.0},  required = {{station = 2,loadout = {"{M2KC_RAFAUT_MK82}"}}} }, -- MK-82 x2
 				{CLSID = "{M2KC_RAFAUT_MK82S}", arg_value = 0.35, attach_point_position = {0.015,  0.036,  0.0}, required = {{station = 2,loadout = {"{M2KC_RAFAUT_MK82S}"}}} }, -- MK-82S x2
@@ -421,7 +390,6 @@ M_2000C =  {
 				
 				--Fuel Tanks
 				{CLSID = "{M2KC_08_RPL541}", arg_value = 0.0, required = {{station = 2,loadout = {"{M2KC_02_RPL541}"}}} }, -- RPL 541 Fuel Tank
-                {CLSID = "{M2KC_08_RPL541_EMPTY}", arg_value = 0.0, required = {{station = 2,loadout = {"{M2KC_02_RPL541_EMPTY}"}}} }, -- RPL 541 Fuel Tank
 			}
 		),
 		
@@ -430,7 +398,7 @@ M_2000C =  {
 				--Air-to-Air
 				{CLSID = "{MMagicII}", arg_value = 0.15, required = {{station = 1,loadout = {"{MMagicII}"}}} }, -- Matra Magic R.550
 				{CLSID = "{Matra155RocketPod}", arg_value = 0.15, required = {{station = 1,loadout = {"{Matra155RocketPod}"}}} }, -- Matra Type 155 Rocket pod
-				
+				{CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}", arg_value = 0.15 }, -- AIM-9M
 				-- Smoke Generators
 				{CLSID = "{A4BCC903-06C8-47bb-9937-A30FEDB4E741}", arg_value = 0.15,arg_increment = -0.1,
 							forbidden = {{station = 2}, {station = 3}, {station = 4}, {station = 6}, {station = 7}, {station = 8}}},-- Smokewinder red
@@ -477,7 +445,7 @@ M_2000C =  {
 			kjx	=	2.85,       --- roll inertia
 			kjz	=	0.00125,    --- pitch inertia
 			Czbe	=	-0.012, --- 
-			cx_gear	=	0.02,   --- 
+			cx_gear	=	0.08,   --- 
 			cx_flap	=	0.05,   --- 
 			cy_flap	=	0.6,  	--- 
 			cx_brk	=	0.025, 	--- 
@@ -542,8 +510,8 @@ M_2000C =  {
 			cefor	=	2.56, 
 			-- following affect thrust/max alt
 			--
-			dpdh_m	=	4100, --  altitude coefficient for max thrust
-			dpdh_f	=	11800, --  altitude coefficient for AB thrust  -- affects thrust?? Apparently makes no diff. between 1000 and 20000
+			dpdh_m	=	4500, --  altitude coefficient for max thrust
+			dpdh_f	=	9800, --  altitude coefficient for AB thrust  -- affects thrust?? Apparently makes no diff. between 1000 and 20000
 			table_data =
 			{
 				{0,		64300,		95000},
@@ -578,7 +546,7 @@ M_2000C =  {
 		{ id = 'OIL_SYSTEM_FAIL_100',		  	  label = _('Oil System Fail'),					enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 		{ id = 'BATT_FAIL',		  	              label = _('Battery Fail'),					enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 		{ id = 'TRN_FAIL',		  	              label = _('Main Transformer Fail'),			enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
-		{ id = 'TRN_FAIL_AUX',	  	              label = _('Aux Transformer Fail'),			enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
+		{ id = 'TRN_FAIL',		  	              label = _('Aux Transformer Fail'),			enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 		{ id = 'ENG_ALT_1_FAIL',		  	      label = _('Engine Alternator 1 Fail'),		enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 		{ id = 'ENG_ALT_2_FAIL',		  	      label = _('Engine Alternator 2 Fail'),		enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
 		{ id = 'HYD_ALT_1_FAIL',		  	      label = _('Hydraulic Alternator 1 Fail'),		enable = false, hh = 0, mm = 0, mmint = 1, prob = 100 },
@@ -698,8 +666,8 @@ M_2000C =  {
 			[1] = {
 				typename = "collection",
 				lights ={
-					{typename = "argnatostrobelight",  argument = 83,  period = 1.333,  phase_shift = 0.0}, -- Top Strobe
-					{typename = "argnatostrobelight",  argument = 802, period = 1.333,  phase_shift = 0.5}, -- Bottom Strobe
+					{typename = "natostrobelight", connector = "TOP_BEACON",    argument_1 = 83,  period = 1.333, color = {0.99, 0.99, 0.99}, phase_shift = 0.0},
+					{typename = "natostrobelight", connector = "BOTTOM_BEACON", argument_1 = 802, period = 1.333, color = {0.99, 0.99, 0.99}, phase_shift = 0.5},
 				}
 			},
 			
@@ -727,9 +695,9 @@ M_2000C =  {
 			[4] = {
 				typename = "collection",
 				lights ={
-					{typename = "argumentlight",  argument  = 190}, --Red Position
-					{typename = "argumentlight",  argument  = 192}, --Green Position
-					{typename = "argumentlight",  argument  = 191}, --White Position
+					{typename = "argumentlight", connector = "LIGHT_NAV_RED",   color = {0.99, 0.11, 0.3},  pos_correction  = {0, 0, 0.0}, argument  = 190},
+					{typename = "argumentlight", connector = "LIGHT_NAV_GREEN", color = {0.11, 0.99, 0.3},  pos_correction  = {0, 0, 0.0}, argument  = 191},
+					{typename = "argumentlight", connector = "LIGHT_NAV_WHITE", color = {0.99, 0.99, 0.99}, pos_correction  = {0, 0, 0.0}, argument  = 192},
 				}
 			},
 			
