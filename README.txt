@@ -1,0 +1,1 @@
+Adds the country of Gorgas to DCS World. Install into your DCS install folder.
