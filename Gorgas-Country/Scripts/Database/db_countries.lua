@@ -551,7 +551,7 @@ country:add('ISRAEL',_("Israel"), "Israel", "ISR",
   'Israel.lua'
 );
 
-country:add('GEORGIA',_("Georgia"), "Georgia", "GRG",
+country:add('GORGAS',_("Gorgas"), "Gorgas", "GRG",
   use_default_ranks,
   {
     award('Medali "Sabrdzolo Damsakhurebisatvis"', _('Medali "Sabrdzolo Damsakhurebisatvis"'), 200,  'GR-01-Medal_for_the_Service_in_Battle.png'),
@@ -563,7 +563,7 @@ country:add('GEORGIA',_("Georgia"), "Georgia", "GRG",
     award('Girsebis Medali', _('Girsebis Medali'), 2600, 'GR-07-Medal_of_Valour.png'),
     award('Okros Satsmisis Ordeni', _('Okros Satsmisis Ordeni'), 3000, 'GR-08-Order_of_the_Gold_Fleece.png'),
   },
-  'Georgia.lua'
+  'Gorgas.lua'
 );
 
 country:add('INSURGENTS',_("Insurgents"), "Insurgents", "INS",
@@ -2100,7 +2100,7 @@ local units = country:get("DENMARK").Units
 
 
 -- GEORGIA
-local units = country:get("GEORGIA").Units
+local units = country:get("GORGAS").Units
     cnt_unit( units.Planes.Plane, "Su-25");
     cnt_unit( units.Planes.Plane, "An-26B");
     cnt_unit( units.Planes.Plane, "Su-25T");
@@ -5277,146 +5277,6 @@ local units = country:get("CUBA").Units
 	cnt_unit( units.Ships.Ship, "ZWEZDNY");
 	cnt_unit( units.Ships.Ship, "Dry-cargo ship-1");
 	cnt_unit( units.Ships.Ship, "Dry-cargo ship-2");
-
-
---GORGAS STARTS
-
-local units =  country:get("GORGAS").Units
-  cnt_unit( units.Planes.Plane, "MiG-29S");
-  cnt_unit( units.Planes.Plane, "Su-25T");
-  cnt_unit( units.Planes.Plane, "Yak-40");
-  cnt_unit( units.Planes.Plane, "An-26B");
-  cnt_unit( units.Planes.Plane, "An-30M");
-  cnt_unit( units.Planes.Plane, "IL-78M");
-  cnt_unit( units.Planes.Plane, "IL-76MD");
-  cnt_unit( units.Planes.Plane, "L-39ZA");
-  cnt_unit( units.Planes.Plane, "TF-51D");
-  cnt_unit( units.Planes.Plane, "F-16C bl.50");
-  cnt_unit( units.Planes.Plane, "F-16C_50");
-  cnt_unit( units.Planes.Plane, "FA-18C_hornet");
-  cnt_unit( units.Planes.Plane, "AJS37");
-  cnt_unit( units.Planes.Plane, "M-2000C");
-  cnt_unit( units.Planes.Plane, "E-2C");
-  cnt_unit( units.Planes.Plane, "F-14A");
-  cnt_unit( units.Planes.Plane, "L-39C");
-  cnt_unit( units.Planes.Plane, "KC130");
-
-  cnt_unit( units.Ships.Ship, "ELNYA");
-  cnt_unit( units.Ships.Ship, "ALBATROS");
-  cnt_unit( units.Ships.Ship, "MOLNIYA");
-  cnt_unit( units.Ships.Ship, "Dry-cargo ship-1");
-  cnt_unit( units.Ships.Ship, "Dry-cargo ship-2");
-  cnt_unit( units.Ships.Ship, "ZWEZDNY");
-
-  cnt_unit( units.Cars.Car, "BTR-80");
-  cnt_unit( units.Cars.Car, "1L13 EWR");
-  cnt_unit( units.Cars.Car, "55G6 EWR");
-  cnt_unit( units.Cars.Car, "S-300PS 40B6M tr");
-  cnt_unit( units.Cars.Car, "S-300PS 40B6MD sr");
-  cnt_unit( units.Cars.Car, "S-300PS 64H6E sr");
-  cnt_unit( units.Cars.Car, "S-300PS 5P85C ln");
-  cnt_unit( units.Cars.Car, "S-300PS 5P85D ln");
-  cnt_unit( units.Cars.Car, "SA-11 Buk SR 9S18M1");
-  cnt_unit( units.Cars.Car, "SA-11 Buk CC 9S470M1");
-  cnt_unit( units.Cars.Car, "SA-11 Buk LN 9A310M1");
-  cnt_unit( units.Cars.Car, "Kub 1S91 str");
-  cnt_unit( units.Cars.Car, "Kub 2P25 ln");
-  cnt_unit( units.Cars.Car, "Osa 9A33 ln");
-  cnt_unit( units.Cars.Car, "Strela-1 9P31");
-  cnt_unit( units.Cars.Car, "Strela-10M3");
-  cnt_unit( units.Cars.Car, "Dog Ear radar");
-  cnt_unit( units.Cars.Car, "Tor 9A331");
-  cnt_unit( units.Cars.Car, "2S6 Tunguska");
-  cnt_unit( units.Cars.Car, "ZSU-23-4 Shilka");
-  cnt_unit( units.Cars.Car, "SAU Msta");
-  cnt_unit( units.Cars.Car, "SAU Akatsia");
-  cnt_unit( units.Cars.Car, "SAU 2-C9");
-  cnt_unit( units.Cars.Car, "ATMZ-5");
-  cnt_unit( units.Cars.Car, "ATZ-10");
-  cnt_unit( units.Cars.Car, "BMD-1");
-  cnt_unit( units.Cars.Car, "BMP-1");
-  cnt_unit( units.Cars.Car, "BMP-2");
-  cnt_unit( units.Cars.Car, "BRDM-2");
-  cnt_unit( units.Cars.Car, "Grad-URAL");
-  cnt_unit( units.Cars.Car, "Uragan_BM-27");
-  cnt_unit( units.Cars.Car, "Smerch");
-  cnt_unit( units.Cars.Car, "T-80UD");
-  cnt_unit( units.Cars.Car, "UAZ-469");
-  cnt_unit( units.Cars.Car, "Ural-375");
-  cnt_unit( units.Cars.Car, "Ural-375 PBU");
-  cnt_unit( units.Cars.Car, "IKARUS Bus");
-  cnt_unit( units.Cars.Car, "VAZ Car");
-  cnt_unit( units.Cars.Car, "Trolley bus");
-  cnt_unit( units.Cars.Car, "KAMAZ Truck");
-  cnt_unit( units.Cars.Car, "LAZ Bus");
-  cnt_unit( units.Cars.Car, "SAU Gvozdika");
-  cnt_unit( units.Cars.Car, "BMP-3");
-  cnt_unit( units.Cars.Car, "BTR_D");
-  cnt_unit( units.Cars.Car, "S-300PS 54K6 cp");
-  cnt_unit( units.Cars.Car, "GAZ-3307");
-  cnt_unit( units.Cars.Car, "GAZ-66");
-  cnt_unit( units.Cars.Car, "GAZ-3308");
-  cnt_unit( units.Cars.Car, "MAZ-6303");
-  cnt_unit( units.Cars.Car, "ZIL-4331");
-  cnt_unit( units.Cars.Car, "SKP-11");
-  cnt_unit( units.Cars.Car, "Ural-4320T");
-  cnt_unit( units.Cars.Car, "Ural-4320-31");
-  cnt_unit( units.Cars.Car, "Ural ATsP-6");
-  cnt_unit( units.Cars.Car, "ZiL-131 APA-80");
-  cnt_unit( units.Cars.Car, "ZIL-131 KUNG");
-  cnt_unit( units.Cars.Car, "Ural-4320 APA-5D");
-  cnt_unit( units.Cars.Car, "ZU-23 Emplacement");
-  cnt_unit( units.Cars.Car, "ZU-23 Emplacement Closed");
-  cnt_unit( units.Cars.Car, "Ural-375 ZU-23");
-  cnt_unit( units.Cars.Car, "MTLB");
-  cnt_unit( units.Cars.Car, "T-72B");
-  cnt_unit( units.Cars.Car, "SA-18 Igla-S manpad");
-  cnt_unit( units.Cars.Car, "SA-18 Igla-S comm");
-  cnt_unit( units.Cars.Car, "T-55");
-  cnt_unit( units.Cars.Car, "Paratrooper RPG-16");
-  cnt_unit( units.Cars.Car, "Paratrooper AKS-74");
-  cnt_unit( units.Cars.Car, "Boman");
-  cnt_unit( units.Cars.Car, "2B11 mortar");
-  cnt_unit( units.Cars.Car, "5p73 s-125 ln");
-  cnt_unit( units.Cars.Car, "snr s-125 tr");
-  cnt_unit( units.Cars.Car, "p-19 s-125 sr");
-  cnt_unit( units.Cars.Car, "Infantry AK");
-  cnt_unit( units.Cars.Car, "T-90");
-  cnt_unit( units.Cars.Car, "Tigr_233036");
-  cnt_unit( units.Cars.Car, "M-113");
-  cnt_unit( units.Cars.Car, "Patriot str");
-  cnt_unit( units.Cars.Car, "Patriot ln");
-  cnt_unit( units.Cars.Car, "Patriot AMG");
-  cnt_unit( units.Cars.Car, "Patriot EPP");
-  cnt_unit( units.Cars.Car, "Patriot ECS");
-  cnt_unit( units.Cars.Car, "Patriot cp");
-  cnt_unit( units.Cars.Car, "Hawk sr");
-  cnt_unit( units.Cars.Car, "Hawk cwar");
-  cnt_unit( units.Cars.Car, "Hawk pcp");
-  cnt_unit( units.Cars.Car, "Hawk tr");
-  cnt_unit( units.Cars.Car, "Hawk ln");
-  cnt_unit( units.Cars.Car, "Roland ADS");
-  cnt_unit( units.Cars.Car, "Roland Radar");
-  cnt_unit( units.Cars.Car, "Gepard");
-  cnt_unit( units.Cars.Car, "Hummer");
-  cnt_unit( units.Cars.Car, "Leopard-2");
-  cnt_unit( units.Cars.Car, "Leopard1A3");
-  cnt_unit( units.Cars.Car, "M-109");
-  cnt_unit( units.Cars.Car, "Marder");
-  cnt_unit( units.Cars.Car, "TPZ");
-  cnt_unit( units.Cars.Car, "MLRS");
-  cnt_unit( units.Cars.Car, "MLRS FDDM");
-  cnt_unit( units.Cars.Car, "Soldier stinger");
-  cnt_unit( units.Cars.Car, "Stinger comm");
-  cnt_unit( units.Cars.Car, "M 818");
-  cnt_unit( units.Cars.Car, "M978 HEMTT Tanker");
-  cnt_unit( units.Cars.Car, "HEMTT TFFT");
-  cnt_unit( units.Helicopters.Helicopter, "Mi-24V");
-  cnt_unit( units.Helicopters.Helicopter, "Mi-8MT");
-  cnt_unit( units.Helicopters.Helicopter, "Ka-50");
-  cnt_unit( units.Helicopters.Helicopter, "UH-1H");
-
---GORGAS ENDS
 
 cache = {}
 local function build_cache(t)

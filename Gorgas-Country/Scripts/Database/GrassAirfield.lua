@@ -1,6 +1,6 @@
 
-local WESTERN_FARP = 1
-local RUSSIAN_FARP = 2
+local WESTERN_GRASSAIRFIELD = 1
+local RUSSIAN_GRASSAIRFIELD = 2
 
 --Ground Crew
 local RESOURCE_AMMO = 0
@@ -9,14 +9,14 @@ local RESOURCE_GROUND_SERVICE = 2
 
 --ATC
 local RESOURCE_ATC = 0
---FARP
+--GRASSAIRFIELD
 local RESOURCE_NIGHT_ILLUMINATION = 0
 
 --model file names are case independent
 
 
 local objects_by_type = {
-	[RUSSIAN_FARP] = {
+	[RUSSIAN_GRASSAIRFIELD] = {
 		groundCrew = {
 			[RESOURCE_AMMO] = { "URAL_4320_B", "SetkaKP" },
 			[RESOURCE_ELEC_POWER] = {"Zil_APA-80", "URAL-APA" },
@@ -31,11 +31,11 @@ local objects_by_type = {
 		ATC = {
 			[RESOURCE_ATC] = { "Zil_SKP-11", "KP_UG" }
 		},
-		FARP = {
+		GRASSAIRFIELD = {
 			[RESOURCE_NIGHT_ILLUMINATION] = { "Zil_SKP-11" }
 		}
 	},
-	[WESTERN_FARP] = {
+	[WESTERN_GRASSAIRFIELD] = {
 		groundCrew = {
 			[RESOURCE_AMMO] = { "M-818" },
 			[RESOURCE_ELEC_POWER] = { "M-818" },
@@ -50,7 +50,7 @@ local objects_by_type = {
 		ATC = {
 			[RESOURCE_ATC] = { "HMMWV_M1025", "KP_UG" }
 		},
-		FARP = {
+		GRASSAIRFIELD = {
 			[RESOURCE_NIGHT_ILLUMINATION] = { "HMMWV_M1025" }
 		}
 	}
@@ -64,32 +64,31 @@ local RESOURCE_FUEL = 3
 local RESOURCE_FUEL_MAX = 8
 
 for i = RESOURCE_FUEL, RESOURCE_FUEL_MAX do
-	objects_by_type[RUSSIAN_FARP].groundCrew[i] = fuel_units_red
-	objects_by_type[WESTERN_FARP].groundCrew[i] = fuel_units_blue
+	objects_by_type[RUSSIAN_GRASSAIRFIELD].groundCrew[i] = fuel_units_red
+	objects_by_type[WESTERN_GRASSAIRFIELD].groundCrew[i] = fuel_units_blue
 end
 
 objects_by_country_name = {
-	["Russia"] = objects_by_type[RUSSIAN_FARP],
-	["Ukraine"] = objects_by_type[RUSSIAN_FARP],
-	["USA"] = objects_by_type[WESTERN_FARP],
-	["Switzerland"] = objects_by_type[WESTERN_FARP],	
-	["Turkey"] = objects_by_type[WESTERN_FARP],
-	["Germany"] = objects_by_type[WESTERN_FARP],
-	["Canada"] = objects_by_type[WESTERN_FARP],
-	["UK"] = objects_by_type[WESTERN_FARP],
-	["France"] = objects_by_type[WESTERN_FARP],
-	["Spain"] = objects_by_type[WESTERN_FARP],
-	["The Netherlands"] = objects_by_type[WESTERN_FARP],
-	["Belgium"] = objects_by_type[WESTERN_FARP],
-	["Norway"] = objects_by_type[WESTERN_FARP],
-	["Denmark"] = objects_by_type[WESTERN_FARP],
-	["Gorgas"] = objects_by_type[RUSSIAN_FARP],
-	["Israel"] = objects_by_type[WESTERN_FARP],
-	["Insurgents"] = objects_by_type[RUSSIAN_FARP],
-	["Italy"] = objects_by_type[WESTERN_FARP],
-	["Australia"] = objects_by_type[WESTERN_FARP],
-	["Saudi Arabia"] = objects_by_type[WESTERN_FARP]
+	["Russia"] = objects_by_type[RUSSIAN_GRASSAIRFIELD],
+	["Ukraine"] = objects_by_type[RUSSIAN_GRASSAIRFIELD],
+	["USA"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["Switzerland"] = objects_by_type[WESTERN_GRASSAIRFIELD],	
+	["Turkey"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["Germany"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["Canada"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["UK"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["France"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["Spain"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["The Netherlands"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["Belgium"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["Norway"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["Denmark"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["Gorgas"] = objects_by_type[RUSSIAN_GRASSAIRFIELD],
+	["Israel"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["Insurgents"] = objects_by_type[RUSSIAN_GRASSAIRFIELD],
+	["Italy"] = objects_by_type[WESTERN_GRASSAIRFIELD],
+	["Australia"] = objects_by_type[WESTERN_GRASSAIRFIELD]
 }
 
-farp_objects_search_radius = 150.0
-farp_objects_update_dt = 1.0
+grassairfield_objects_search_radius = 150.0
+grassairfield_objects_update_dt = 1.0

@@ -70,7 +70,7 @@ unitSystemByCountry = {
 	[base.country.id.NORWAY]			= unitSystems.imperial,
 	[base.country.id.DENMARK]			= unitSystems.imperial,
 	[base.country.id.ISRAEL]			= unitSystems.imperial,
-	[base.country.id.GEORGIA]			= unitSystems.imperial,
+	[base.country.id.GORGAS]			= unitSystems.imperial,
 	[base.country.id.INSURGENTS]		= unitSystems.metric,
 	[base.country.id.ABKHAZIA]			= unitSystems.metric,
 	[base.country.id.SOUTH_OSETIA]		= unitSystems.metric,
@@ -127,8 +127,7 @@ unitSystemByCountry = {
 	[base.country.id.YUGOSLAVIA]				= unitSystems.metric,
 	[base.country.id.USSR]						= unitSystems.metric,	
 	[base.country.id.ITALIAN_SOCIAL_REPUBLIC]	= unitSystems.metric,	
-	[base.country.id.ALGERIA]					= unitSystems.metric,
-	[base.country.id.GORGAS] 					= unitSystems.imperial,	
+	[base.country.id.ALGERIA]					= unitSystems.metric,	
 }
 
 space_ 			= p.separator(' ')
@@ -2120,7 +2119,6 @@ local languageByCountry = {
 	[base.country.id.YUGOSLAVIA]	= language.RUS,
 	[base.country.id.USSR]			= language.RUS,
 	[base.country.id.KAZAKHSTAN]	= language.RUS,
-	[base.country.id.GORGAS] 		= language.ENG,
 }
 
 --Accents
@@ -2145,7 +2143,7 @@ local accentTable = {
 		[base.country.id.NORWAY]			= accent.GERMANY,
 		[base.country.id.DENMARK]			= accent.GERMANY,
 		[base.country.id.ISRAEL]			= accent.USA,
-		[base.country.id.GEORGIA]			= accent.USA,
+		[base.country.id.GORGAS]			= accent.USA,
 		[base.country.id.INSURGENTS]		= accent.RUSSIA,
 		[base.country.id.ABKHAZIA]			= accent.RUSSIA,
 		[base.country.id.SOUTH_OSETIA]		= accent.RUSSIA,
@@ -2155,7 +2153,6 @@ local accentTable = {
         [base.country.id.SWITZERLAND]		= accent.GERMANY,
 		[base.country.id.CHINA]				= accent.CHINA,--by uboats
 		[base.country.id.KAZAKHSTAN]		= accent.RUSSIA,
-		[base.country.id.GORGAS] 		= accent.USA,
 	}
 }
 
