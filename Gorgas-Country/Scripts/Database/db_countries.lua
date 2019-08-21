@@ -2099,14 +2099,39 @@ local units = country:get("DENMARK").Units
 	cnt_unit( units.Helicopters.Helicopter, "UH-1H");
 
 
--- GEORGIA
-local units = country:get("GORGAS").Units
-    cnt_unit( units.Planes.Plane, "Su-25");
-    cnt_unit( units.Planes.Plane, "An-26B");
-    cnt_unit( units.Planes.Plane, "Su-25T");
-	cnt_unit( units.Planes.Plane, "L-39ZA");
-	cnt_unit( units.Planes.Plane, "Yak-40");
-	cnt_unit( units.Planes.Plane, "P-51D");
+--GORGAS STARTS
+
+local units =  country:get("GORGAS").Units
+  cnt_unit( units.Planes.Plane, "MiG-29S");
+  cnt_unit( units.Planes.Plane, "Su-25T");
+  cnt_unit( units.Planes.Plane, "Yak-40");
+  cnt_unit( units.Planes.Plane, "An-26B");
+  cnt_unit( units.Planes.Plane, "An-30M");
+  cnt_unit( units.Planes.Plane, "IL-78M");
+  cnt_unit( units.Planes.Plane, "IL-76MD");
+  cnt_unit( units.Planes.Plane, "L-39ZA");
+  cnt_unit( units.Planes.Plane, "TF-51D");
+  cnt_unit( units.Planes.Plane, "F-16C bl.50");
+  cnt_unit( units.Planes.Plane, "F-16C_50");
+  cnt_unit( units.Planes.Plane, "FA-18C_hornet");
+  cnt_unit( units.Planes.Plane, "AJS37");
+  cnt_unit( units.Planes.Plane, "M-2000C");
+  cnt_unit( units.Planes.Plane, "E-2C");
+  cnt_unit( units.Planes.Plane, "F-14A");
+  cnt_unit( units.Planes.Plane, "F-14B");
+  cnt_unit( units.Planes.Plane, "L-39C");
+  cnt_unit( units.Planes.Plane, "KC130");
+
+  cnt_unit( units.Ships.Ship, "ELNYA");
+  cnt_unit( units.Ships.Ship, "ALBATROS");
+  cnt_unit( units.Ships.Ship, "MOLNIYA");
+  cnt_unit( units.Ships.Ship, "Dry-cargo ship-1");
+  cnt_unit( units.Ships.Ship, "Dry-cargo ship-2");
+  cnt_unit( units.Ships.Ship, "ZWEZDNY");
+
+  cnt_unit( units.Cars.Car, "Leopard-2");
+  cnt_unit( units.Cars.Car, "Marder");
+	
 --Historical mode Aircraft GEORGIA
 	cnt_unit( units.Planes.Plane, "L-39C");
 	cnt_unit( units.Planes.Plane, "Yak-52");
@@ -2201,6 +2226,10 @@ local units = country:get("GORGAS").Units
     cnt_unit( units.Helicopters.Helicopter, "Mi-24V");
 --Historical mode Heli GEORGIA
 	cnt_unit( units.Helicopters.Helicopter, "Mi-24P");
+	cnt_unit( units.Helicopters.Helicopter, "Mi-24V");
+	cnt_unit( units.Helicopters.Helicopter, "Mi-8MT");
+	cnt_unit( units.Helicopters.Helicopter, "Ka-50");
+	cnt_unit( units.Helicopters.Helicopter, "UH-1H");
 --Historical mode Heli GEORGIA--end
 
 
