@@ -2121,6 +2121,7 @@ local units =  country:get("GORGAS").Units
   cnt_unit( units.Planes.Plane, "F-14B");
   cnt_unit( units.Planes.Plane, "L-39C");
   cnt_unit( units.Planes.Plane, "KC130");
+  cnt_unit( units.Planes.Plane, "C-130");
 
   cnt_unit( units.Ships.Ship, "ELNYA");
   cnt_unit( units.Ships.Ship, "ALBATROS");
