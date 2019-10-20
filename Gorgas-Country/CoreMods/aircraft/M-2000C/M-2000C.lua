@@ -260,6 +260,7 @@ M_2000C =  {
 			{	
 				--Air-to-Air
 				{CLSID = "{MMagicII}", arg_value = 0.15, required = {{station = 9,loadout = {"{MMagicII}"}}} }, -- Matra Magic R.550
+				{CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}", arg_value = 0.15 }, -- AIM-9M
 				{CLSID = "{Matra155RocketPod}", arg_value = 0.15, required = {{station = 9,loadout = {"{Matra155RocketPod}"}}} }, -- Matra Type 155 Rocket pod
 				
 				-- Smoke Generators
@@ -283,6 +284,7 @@ M_2000C =  {
 				--Air-to-Air
 				{CLSID = "{MMagicII}", arg_value = 0.15, required = {{station = 8,loadout = {"{MMagicII}"}}} }, -- Matra Magic R.550
 				{CLSID = "{Matra_S530D}", arg_value = 0.15, required = {{station = 8,loadout = {"{Matra_S530D}"}}} }, -- Matra Super 530D
+				{CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}", arg_value = 0.15 }, -- AIM-9M
 				
 				--Air-to-Ground
 				{CLSID = "{Matra155RocketPod}", arg_value = 0.25, required = {{station = 8,loadout = {"{Matra155RocketPod}"}}} }, -- Matra Type 155 Rocket pod
@@ -409,6 +411,7 @@ M_2000C =  {
 				--Air-to-Air
 				{CLSID = "{MMagicII}", arg_value = 0.15, required = {{station = 2,loadout = {"{MMagicII}"}}} }, -- Matra Magic R.550
 				{CLSID = "{Matra_S530D}", arg_value = 0.15, required = {{station = 2,loadout = {"{Matra_S530D}"}}} }, -- Matra Super 530D
+				{CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}", arg_value = 0.15 }, -- AIM-9M
 				
 				--Air-to-Ground
 				{CLSID = "{Matra155RocketPod}", arg_value = 0.25, required = {{station = 2,loadout = {"{Matra155RocketPod}"}}} }, -- Matra Type 155 Rocket pod
@@ -429,6 +432,7 @@ M_2000C =  {
 			{
 				--Air-to-Air
 				{CLSID = "{MMagicII}", arg_value = 0.15, required = {{station = 1,loadout = {"{MMagicII}"}}} }, -- Matra Magic R.550
+				{CLSID = "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}", arg_value = 0.15 }, -- AIM-9M
 				{CLSID = "{Matra155RocketPod}", arg_value = 0.15, required = {{station = 1,loadout = {"{Matra155RocketPod}"}}} }, -- Matra Type 155 Rocket pod
 				
 				-- Smoke Generators

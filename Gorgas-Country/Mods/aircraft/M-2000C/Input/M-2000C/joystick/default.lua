@@ -42,9 +42,9 @@ join(res.keyCommands,{
 	{down = iCommandPlane_HOTAS_PinkySwitchAft, up = iCommandPlane_HOTAS_PinkySwitchForward, name = _('Autopilot Disconnect/Exceed Elastic Limit'),  category = _('HOTAS')},
 	{combos = {{key = 'JOY_BTN3'}}, down = iCommandPlane_HOTAS_BoatSwitchAft, up = iCommandPlane_HOTAS_BoatSwitchForward, name = _('Nosewheel Steering/IFF Interrogate'), category = _('HOTAS')},
 	
-    {down = iCommandPlaneModeVS,     name = _('Special Modes FWD'), category = _('HOTAS')},
-    {down = iCommandPlaneModeHelmet, name = _('Special Modes AFT'), category = _('HOTAS')},
-	{down = iCommandRefusalTWS,      name = _('Target Unlock/Special Modes Deselect'), category = _('HOTAS')},
+    --{down = iCommandPlaneModeVS,     name = _('Special Modes FWD'), category = _('HOTAS')},
+    --{down = iCommandPlaneModeHelmet, name = _('Special Modes AFT'), category = _('HOTAS')},
+	--{down = iCommandRefusalTWS,      name = _('Target Unlock/Special Modes Deselect'), category = _('HOTAS')},
 	
 	{combos = {{key = 'JOY_BTN2'}},      down = iCommandPlaneChangeLock, name = _('STT/TWS Toggle (Target Lock)'), category = _('HOTAS')},
 	
@@ -57,14 +57,19 @@ join(res.keyCommands,{
 	
 	{down = iCommandPlaneCircuitBreaker_12,  name = _('NAV Update/MAGIC unlock'), category = _('HOTAS')},
 	
-	-- B. HOTAS Throttle
-	{down = iCommandPlaneModeCannon, name = _('AA Gun SELECT'),   category = _('HOTAS')},
-	{down = iCommandPlaneModeGrid,   name = _('PCA SELECT'),      category = _('HOTAS')},
-	{down = iCommandPlaneModeFI0,    name = _('MAGIC SELECT'), category = _('HOTAS')},
+	-- Weapons System Command	
+    {down = 3955, up = 3955, cockpit_device_id = devices.WeaponSystemCommand, value_down = 0,   name = _('Weapons SystemCMD Depress'),	category = _('HOTAS')},
+	{down = 3955, up = 3955, cockpit_device_id = devices.WeaponSystemCommand, value_down = 1,   name = _('Weapons SystemCMD FWD'),		category = _('HOTAS')},
+	{down = 3955, up = 3955, cockpit_device_id = devices.WeaponSystemCommand, value_down = 2,   name = _('Weapons SystemCMD AFT'),		category = _('HOTAS')},
 	
-	{down = iCommandAutoLockOnNearestSurfaceTarget, name = _('Magic Slave/AG Designate/INS Position Update'), category = _('HOTAS')},
-	{down = iCommandPlane_HOTAS_MIC_SwitchUp,   up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('Main U/VHF Radio SELECT'), category = _('HOTAS')},
-	{down = iCommandPlane_HOTAS_MIC_SwitchDown, up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('Aux. UHF Radio SELECT'),   category = _('HOTAS')},
+	-- B. HOTAS Throttle
+	{down = iCommandPlaneModeCannon,													name = _('CNM AA Gun'),										category = _('HOTAS')},
+	{down = iCommandPlaneModeGrid,														name = _('CNM neutral (PCA SELECT)'),						category = _('HOTAS')},
+	{down = iCommandPlaneModeFI0,														name = _('CNM MAGIC'),										category = _('HOTAS')},
+	
+	{down = iCommandAutoLockOnNearestSurfaceTarget,										name = _('Magic Slave/AG Designate/INS Position Update'),	category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_MIC_SwitchUp,   up = iCommandPlane_HOTAS_MIC_SwitchOff,	name = _('Main U/VHF Radio SELECT'),						category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_MIC_SwitchDown, up = iCommandPlane_HOTAS_MIC_SwitchOff,	name = _('Aux. UHF Radio SELECT'),							category = _('HOTAS')},
 	
 	{down = iCommandPlaneAirBrake,    name = _('Airbrake TOGGLE'), category = _('HOTAS')},
 	{down = iCommandPlaneAirBrakeOn,  name = _('Airbrake ON'),     category = _('HOTAS')},
@@ -90,9 +95,9 @@ join(res.keyCommands,{
     {down = 3248, up = 3248, cockpit_device_id = 6,  value_down = 1, name = _('Selective Jettison Safety Cover OPEN'), category = _('Weapons Management')},
     {down = 3248, up = 3248, cockpit_device_id = 6,  value_down = 0, name = _('Selective Jettison Safety Cover CLOSED'), category = _('Weapons Management')},
     {down = 3409, up = 3409, cockpit_device_id = 6,  value_up = 0,   value_down = 1, name = _('Emergency Jettison'), category = _('Weapons Management')},
-	{down = 3206, up = 3206, cockpit_device_id = 5, value_down = 0, name = _('Auxiliary Gunsight OFF'), category = _('Weapons Management')},
-	{down = 3206, up = 3206, cockpit_device_id = 5, value_down = 1, name = _('Auxiliary Gunsight ON'), category = _('Weapons Management')},
-	{down = iCommandPlaneAHCPGUNArm,    name = _('Gun Arm TOGGLE'),      category = _('Weapons Management')},
+    {down = 3206, up = 3206, cockpit_device_id = 5, value_down = 0, name = _('Auxiliary Gunsight OFF'), category = _('Weapons Management')},
+    {down = 3206, up = 3206, cockpit_device_id = 5, value_down = 1, name = _('Auxiliary Gunsight ON'), category = _('Weapons Management')},
+    {down = iCommandPlaneAHCPGUNArm,    name = _('Gun Arm TOGGLE'),      category = _('Weapons Management')},
     {down = iCommandSwitchMasterArm,    name = _('Master Arm TOGGLE'),   category = _('Weapons Management')},
     {down = iCommandPlaneLeftMFD_OSB1,  name = _('PCA Button 1 SELECT'), category = _('Weapons Management')},
     {down = iCommandPlaneLeftMFD_OSB2,  name = _('PCA Button 2 SELECT'), category = _('Weapons Management')},
@@ -445,12 +450,19 @@ join(res.keyCommands,{
     {down = 3629, up = 3629, cockpit_device_id = 9, value_down = 0.4, name = _('INS Operational Mode - MAIN'), category = _('Autopilot, Navigation, & INS')},
 	
     -- Pilot & Seat Controls    
-    {down=3906,cockpit_device_id=22,name=_('Helmet Visor TOGGLE'),category=_('Pilot & Seat Controls')},
-    {down = iCommandCockpitShowPilotOnOff, name = _('Pilot Body TOGGLE'), category = _('Pilot & Seat Controls')},
-    {down = iCommandToggleMirrors, name = _('Mirrors TOGGLE'), category = _('Pilot & Seat Controls')},
-    {pressed = iCommandPilotSeatAdjustmentUp  ,  up = iCommandPilotSeatAdjustmentStop, name = _('Seat RAISE'),   category = _('Pilot & Seat Controls')},
-    {pressed = iCommandPilotSeatAdjustmentDown,  up = iCommandPilotSeatAdjustmentStop, name = _('Seat LOWER'), category = _('Pilot & Seat Controls')},
-    {down = iCommandPlaneEject, name = _('Eject (3 times)'), category = _('Pilot & Seat Controls')},
+	{down = iCommandCockpitShowPilotOnOff,												name = _('Hide/Show Pilot Body'),		category = _('Pilot & Seat Controls')},
+	{down = iCommandPlaneCircuitBreaker_10,												name = _('Hide/Show Control Stick'),	category = _('Pilot & Seat Controls')},
+	{down = iCommandPlaneCircuitBreaker_11,												name = _('Hide/Show Throttle'),			category = _('Pilot & Seat Controls')},
+    {down = iCommandViewNightVisionGogglesOn,											name = _('Helmet Visor/NVG TOGGLE'),	category = _('Pilot & Seat Controls')},
+	{down = iCommandCockpitShowPilotOnOff,												name = _('Pilot Body TOGGLE'),			category = _('Pilot & Seat Controls')},
+	{down = iCommandToggleMirrors,														name = _('Mirrors TOGGLE'),				category = _('Pilot & Seat Controls')},
+    {down = iCommandPlaneEject,															name = _('Eject (3 times)'),			category = _('Pilot & Seat Controls')},	
+	{pressed = iCommandPilotSeatAdjustmentUp,	up = iCommandPilotSeatAdjustmentStop,	name = _('Seat RAISE'),					category = _('Pilot & Seat Controls')},
+	{pressed = iCommandPilotSeatAdjustmentDown,	up = iCommandPilotSeatAdjustmentStop,	name = _('Seat LOWER'),					category = _('Pilot & Seat Controls')},
+	
+		-- NVG MOD
+    {pressed = iCommandPlane_Helmet_Brightess_Up , name = _('NVG Gain Up') , category = _('Pilot & Seat Controls')},
+	{pressed = iCommandPlane_Helmet_Brightess_Down, name = _('NVG Gain Down'), category = _('Pilot & Seat Controls')},
 	
 	-- Weapon/CMDS Adjustment
 	{down = device_commands.Button_950, cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change Matra Type 155 Burst Mode (1/3/6/18)'),	category = {_('Ground Adjustment')}},
@@ -459,10 +471,6 @@ join(res.keyCommands,{
 	{down = device_commands.Button_953, cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change Laser Code, Ones (1..8)'),			        category = {_('Ground Adjustment')}},
 	{down = device_commands.Button_954, cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change Gun Burst Lenght (0.5 or 1.0)'),	        category = {_('Ground Adjustment')}},
 	
-		-- NVG MOD
-    {down = iCommandViewNightVisionGogglesOn , name = _('Night Vision Goggles') , category = _('Sensors')},
-    {pressed = iCommandPlane_Helmet_Brightess_Up , name = _('Night Vision Goggles Gain Up') , category = _('Sensors')},
-	{pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Night Vision Goggles Gain Down'), category = _('Sensors')},
 }) 
 
 join(res.axisCommands,{

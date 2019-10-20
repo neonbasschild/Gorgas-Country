@@ -1,0 +1,54 @@
+local count = 0
+local function counter()
+	count = count + 1
+	return count
+end
+-------DEVICE ID-------
+devices = {}
+devices["ASP_3NM"]					= counter()	-- 1
+devices["MECHANICS"]				= counter()
+devices["WEAPON_SYSTEM"]			= counter()
+devices["ELEC_INTERFACE"]			= counter()
+devices["FUEL_INTERFACE"]			= counter()	-- 5
+devices["ENGINE_INTERFACE"]			= counter()
+devices["AIR_INTERFACE"]			= counter()
+devices["FM_PROXY"]					= counter()
+devices["VD_20"]					= counter()
+devices["VD_20_INSTRUCTOR"]			= counter()	-- 10
+devices["STANDBY_COMPASS"]			= counter()
+devices["CLOCK"]					= counter()
+devices["CLOCK_INSTRUCTOR"]			= counter()
+devices["RADAR_ALTIMETER"]			= counter()
+devices["VARIOMETER"]				= counter()	-- 15
+devices["VARIOMETER_INSTRUCTOR"]	= counter()
+devices["GMK1AE"]					= counter()
+devices["REMOTE_COMPASS"]           = counter()
+devices["R_832M"] 		            = counter()
+devices["LIGHTS"] 		            = counter()	-- 20
+devices["RKL_41"] 		       		= counter()
+devices["KPP_1273K"] 		        = counter()
+devices["KPP_1273K_INSTRUCTOR"]     = counter()
+devices["NPP"] 		        		= counter()
+devices["NPP_INSTRUCTOR"]       	= counter()	-- 25
+devices["AIRSPEED"]		        	= counter()
+devices["AIRSPEED_INSTRUCTOR"]	   	= counter()
+devices["TURN_SLIP"]	        	= counter()
+devices["MRP_56"]		        	= counter()
+devices["OXYGEN"]		        	= counter()	-- 30
+devices["RSBN_5"]		        	= counter()
+devices["RSBN_ILS"]		        	= counter()
+devices["ACCELEROMETER"]			= counter()
+devices["SPU_9"] 		        	= counter()
+devices["HYDRO_INTERFACE"] 		    = counter()	-- 35
+devices["SARPP"] 				    = counter()
+devices["CTRL_INTERFACE"]			= counter()
+devices["SYNC_CONTROLLER"]			= counter()
+devices["FAILURES_PANEL"]			= counter()
+devices["MACROS"]          			= counter()	-- 40
+devices["SDU"]          			= counter()
+devices["VARIOMETERS_INPUT"]		= counter()
+devices["VD_20_INPUT"]				= counter()
+devices["KPP_INPUT"]				= counter()
+devices["AGD1"]						= counter()	-- 45
+devices["HEARING_SENS"]				= counter()
+devices["HELMET_DEVICE"]            = counter() -- BKS NVG MOD
